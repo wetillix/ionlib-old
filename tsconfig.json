@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ionic-ui-kit": [
+        "dist/ionic-ui-kit/ionic-ui-kit",
+        "dist/ionic-ui-kit"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
