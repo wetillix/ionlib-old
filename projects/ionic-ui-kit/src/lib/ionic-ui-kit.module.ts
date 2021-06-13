@@ -5,6 +5,6 @@ import { UiButtonModule } from './components/ui-button/ui-button.module';
 @NgModule({
   declarations: [],
   imports: [IonicModule.forRoot()],
-  exports: [],
+  exports: [UiButtonModule],
 })
 export class IonicUiKitModule {}
