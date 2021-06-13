@@ -1,4 +1,10 @@
-<ion-button expand="block" fill="clear" shape="round">
-  <ion-spinner name="bubbles"></ion-spinner>
+<ion-button
+  [expand]="expand"
+  [fill]="fill"
+  [shape]="shape"
+  (click)="onClick($event)"
+  mode="ios"
+>
+  <ion-spinner [name]="spinnerName" *ngIf="isShowingSpinner"></ion-spinner>
   Click me
 </ion-button>
