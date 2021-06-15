@@ -1,0 +1,15 @@
+<ion-button
+  [color]="color"
+  [style.--border-radius]="borderRadius"
+  [style.width]="width"
+  [style.height]="height"
+  [disabled]="disabled"
+  [mode]="mode"
+>
+  <ion-spinner
+    [name]="spinnerName"
+    [color]="spinnerColor"
+    [style.display]="displaySpinner"
+  ></ion-spinner>
+  {{ buttonText }}
+</ion-button>
