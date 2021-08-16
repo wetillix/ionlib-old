@@ -17,6 +17,12 @@ export class IonicUiButtonComponent implements OnInit {
   @Input() spinnerName: string = 'bubbles';
   @Input() spinnerColor: string;
   @Input() displaySpinner: string = 'none';
+  @Input() spinnerPosition: string = 'right';
+
+  @Input() iconName: string = '';
+  @Input() iconColor: string;
+  @Input() displayIcon: string = 'none';
+  @Input() iconPosition: string = 'right';
 
   constructor() {}
 

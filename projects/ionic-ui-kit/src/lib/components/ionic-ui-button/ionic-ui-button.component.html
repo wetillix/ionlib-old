@@ -10,6 +10,16 @@
     [name]="spinnerName"
     [color]="spinnerColor"
     [style.display]="displaySpinner"
+    [style.right]="spinnerPosition === 'right' ? '0px' : 'initial'"
+    [style.left]="spinnerPosition === 'left' ? '0px' : 'initial'"
   ></ion-spinner>
+
+  <ion-icon
+    [name]="iconName"
+    [color]="iconColor"
+    [style.display]="displayIcon"
+    [style.right]="iconPosition === 'right' ? '0px' : 'initial'"
+    [style.left]="iconPosition === 'left' ? '0px' : 'initial'"
+  ></ion-icon>
   {{ buttonText }}
 </ion-button>
