@@ -7,12 +7,12 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class IonicUiButtonComponent implements OnInit {
   @Input() borderRadius: string;
-  @Input() width: string = '90%';
+  @Input() width: string;
   @Input() height: string;
   @Input() color: string;
   @Input() disabled: boolean = false;
   @Input() mode: string = 'ios';
-  @Input() buttonText: string = 'Button';
+  @Input() buttonText: string = '';
 
   @Input() spinnerName: string = 'bubbles';
   @Input() spinnerColor: string;
