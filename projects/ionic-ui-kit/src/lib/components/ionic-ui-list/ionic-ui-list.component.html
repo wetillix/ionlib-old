@@ -1,0 +1,49 @@
+<ion-list
+  [lines]="lines"
+  [inset]="inset"
+  [mode]="mode"
+  [style.border]="borderLines"
+  [style.border-radius]="borderRadiusLines"
+  [ngClass]="{ 'list-lines__none': !inset && lines === 'none' }"
+>
+  <ng-container *ngIf="listMode === 'full'">
+    <ion-item
+      *ngFor="let item of items"
+      (click)="onGetItemInfo(item)"
+      [lines]="lines"
+    >
+      <ion-avatar>
+        <img [src]="item.image" />
+      </ion-avatar>
+      <ion-label>
+        <h1>{{ item.title }}</h1>
+        <p>{{ item.description }}</p>
+      </ion-label>
+      <ion-icon
+        name="chevron-forward-outline"
+        slot="end"
+        [color]="insetIconColor"
+        *ngIf="inset"
+      ></ion-icon>
+    </ion-item>
+  </ng-container>
+
+  <ng-container *ngIf="listMode === 'standard'">
+    <ion-item
+      class="item-standard"
+      [lines]="lines"
+      *ngFor="let item of items"
+      (click)="onGetItemInfo(item)"
+      [mode]="mode"
+    >
+      <ion-icon
+        slot="start"
+        [name]="item.icon"
+        class="icon-standard"
+      ></ion-icon>
+      <ion-label>
+        {{ item.title }}
+      </ion-label>
+    </ion-item>
+  </ng-container>
+</ion-list>
