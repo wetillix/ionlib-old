@@ -1,0 +1,33 @@
+.list-lines__none {
+  width: 91%;
+  display: block;
+  margin: 0 auto;
+}
+
+ion-item {
+  --padding-start: 16px;
+  height: 80px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+}
+
+.item-standard {
+  height: inherit;
+}
+
+ion-item > ion-avatar {
+  height: 48px;
+  width: 48px;
+}
+
+ion-item > ion-label {
+  margin-left: 16px;
+}
+
+ion-label > h1 {
+  font-size: 18px;
+}
+
+ion-icon {
+  font-size: x-large;
+}
