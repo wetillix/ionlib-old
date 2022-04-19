@@ -11,7 +11,7 @@ export class IonicUiButtonComponent implements OnInit {
   @Input() height: string;
   @Input() color: string;
   @Input() disabled: boolean = false;
-  @Input() mode: string = 'ios';
+  @Input() mode: 'ios' | 'android' = 'ios';
   @Input() buttonText: string = '';
 
   @Input() spinnerName: string = 'bubbles';
