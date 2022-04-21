@@ -6,7 +6,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./ionic-ui-checkbox.component.css'],
 })
 export class IonicUiCheckboxComponent implements OnInit {
-  @Input() color: string;
+  @Input() checkboxColor: string;
+  @Input() labelColor: string;
   @Input() disabled: boolean = false;
   @Input() value: boolean = false;
   @Input() position: 'start' | 'end' = 'start';
