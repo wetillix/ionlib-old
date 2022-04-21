@@ -3,4 +3,5 @@ export interface IItem {
   description?: string;
   image?: string;
   icon?: string;
+  args?: any;
 }
