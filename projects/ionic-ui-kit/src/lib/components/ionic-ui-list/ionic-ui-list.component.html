@@ -44,6 +44,12 @@
       <ion-label>
         {{ item.title }}
       </ion-label>
+      <ion-icon
+        name="chevron-forward-outline"
+        slot="end"
+        [color]="insetIconColor"
+        *ngIf="inset"
+      ></ion-icon>
     </ion-item>
   </ng-container>
 </ion-list>
