@@ -1,0 +1,12 @@
+<ion-item mode="ios" lines="none">
+  <ion-label mode="ios" [color]="labelColor">{{ label }}</ion-label>
+  <ion-checkbox
+    slot="start"
+    mode="ios"
+    [value]="value"
+    [color]="checkboxColor"
+    [disabled]="disabled"
+    [slot]="position"
+    (ionChange)="onCheckboxValueChange($event)"
+  ></ion-checkbox>
+</ion-item>
