@@ -1,0 +1,37 @@
+<ion-item lines="none">
+  <ion-input
+    [placeholder]="placeholder"
+    [type]="type"
+    [disabled]="disabled"
+    [accept]="accept"
+    [autocapitalize]="autocapitalize"
+    [autocomplete]="autocomplete"
+    [autocorrect]="autocorrect"
+    [autofocus]="autofocus"
+    [clearInput]="clearInput"
+    [clearOnEdit]="clearOnEdit"
+    [debounce]="debounce"
+    Ò
+    [enterkeyhint]="enterkeyhint"
+    [inputmode]="inputmode"
+    [maxlength]="maxlength"
+    [max]="max"
+    [minlength]="minlength"
+    [multiple]="multiple"
+    [name]="name"
+    [pattern]="pattern"
+    [readonly]="readonly"
+    [required]="required"
+    [spellcheck]="spellcheck"
+    [step]="step"
+    [size]="size"
+    [value]="value"
+    [ngClass]="{
+      'input-success': success && !error,
+      'input-error': error && !success,
+      'input-disabled': disabled
+    }"
+    [style.background]="background"
+  ></ion-input>
+  <ion-icon *ngIf="iconName" [name]="iconName" [color]="iconColor"></ion-icon>
+</ion-item>

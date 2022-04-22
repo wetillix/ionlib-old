@@ -1,0 +1,36 @@
+ion-item > ion-input {
+  border-radius: 12px;
+  --padding-start: 10px;
+  --padding-end: 42px;
+  height: 52px;
+}
+
+ion-item > ion-icon {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  z-index: 1000;
+  font-size: larger;
+}
+
+.input-success {
+  color: #425466;
+  border-radius: 12px;
+  --padding-start: 10px;
+  background: #27ae602b !important;
+}
+
+.input-error {
+  color: #425466;
+  border-radius: 12px;
+  --padding-start: 10px;
+  background: #eb575733 !important;
+}
+
+.input-disabled {
+  color: #42546673 !important;
+  border-radius: 12px;
+  --padding-start: 10px;
+  background: #f1f4f6 !important;
+}
