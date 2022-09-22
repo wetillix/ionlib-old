@@ -1,0 +1,72 @@
+ion-item > ion-searchbar {
+  --padding-start: 10px;
+  --padding-end: 42px;
+  height: 48px;
+  --background: white;
+  border-radius: 6px;
+  border: 1px solid #a0aec0;
+}
+
+ion-item > ion-icon {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  z-index: 1000;
+  font-size: larger;
+}
+
+.input-success {
+  color: #425466;
+  border-radius: 12px;
+  --padding-start: 10px;
+  background: #27ae602b !important;
+}
+
+.input-error {
+  color: #425466;
+  border-radius: 12px;
+  --padding-start: 10px;
+  background: #eb575733 !important;
+}
+
+.input-disabled {
+  color: #42546673 !important;
+  border-radius: 12px;
+  --padding-start: 10px;
+  background: #f1f4f6 !important;
+}
+
+.searchbar-input.sc-ion-searchbar-ios {
+  padding-left: unset;
+  padding-right: unset;
+  -webkit-padding-start: 28px;
+  padding-inline-start: 28px;
+  -webkit-padding-end: 28px;
+  padding-inline-end: 28px;
+  padding-inline-start: 16px !important;
+}
+
+ion-searchbar > div > ion-icon {
+  margin-left: calc(50% - 60px);
+  left: 5px;
+  top: 0;
+  position: absolute;
+  width: 22px;
+  height: 100%;
+  contain: strict;
+  display: none;
+  margin-left: -10px !important;
+}
+
+.searchbar-search-icon.sc-ion-searchbar-ios {
+  margin-left: calc(50% - 60px);
+  left: 5px;
+  top: 0;
+  position: absolute;
+  width: 22px;
+  height: 100%;
+  contain: strict;
+  display: none;
+  margin-left: -10px !important;
+}
