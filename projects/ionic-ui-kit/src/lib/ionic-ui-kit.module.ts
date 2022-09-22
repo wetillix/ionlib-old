@@ -4,6 +4,7 @@ import { IonicUiButtonModule } from './components/ionic-ui-button/ionic-ui-butto
 import { IonicUiCheckboxModule } from './components/ionic-ui-checkbox/ionic-ui-checkbox.module';
 import { IonicUiInputModule } from './components/ionic-ui-input/ionic-ui-input.module';
 import { IonicUiListModule } from './components/ionic-ui-list/ionic-ui-list.module';
+import { IonicUiSearchbarModule } from './components/ionic-ui-searchbar/ionic-ui-searchbar.module';
 
 @NgModule({
   declarations: [],
@@ -13,6 +14,7 @@ import { IonicUiListModule } from './components/ionic-ui-list/ionic-ui-list.modu
     IonicUiListModule,
     IonicUiCheckboxModule,
     IonicUiInputModule,
+    IonicUiSearchbarModule,
   ],
 })
 export class IonicUiKitModule {}
