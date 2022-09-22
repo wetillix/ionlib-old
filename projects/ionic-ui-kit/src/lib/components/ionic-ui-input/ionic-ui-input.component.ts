@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { IItem } from '../../models/iitem/iitem.model';
 
 @Component({
   selector: 'ion-ui-input',
@@ -56,7 +57,28 @@ export class IonicUiInputComponent implements OnInit {
   @Input() iconName: string;
   @Input() iconColor: string = 'dark';
 
+  @Output() ionBlur = new EventEmitter<any>();
+  @Output() ionChange = new EventEmitter<any>();
+  @Output() ionFocus = new EventEmitter<any>();
+  @Output() ionInput = new EventEmitter<any>();
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  onIonBlur(event: any): void {
+    this.ionBlur.emit(event);
+  }
+
+  onIonChange(event: any): void {
+    this.ionChange.emit(event);
+  }
+
+  onIonFocus(event: any): void {
+    this.ionFocus.emit(event);
+  }
+
+  onIonInput(event: any): void {
+    this.ionInput.emit(event);
+  }
 }
