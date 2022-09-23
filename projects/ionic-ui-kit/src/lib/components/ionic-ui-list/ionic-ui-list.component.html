@@ -4,9 +4,10 @@
   [mode]="mode"
   [style.border]="borderLines"
   [style.border-radius]="borderRadiusLines"
+  [style.box-shadow]="boxShadowList"
   [ngClass]="{ 'list-lines__none': !inset && lines === 'none' }"
 >
-  <ng-container *ngIf="listMode === 'full'">
+  <ng-container *ngIf="listMode === 'full' && itemsFiltered.length === 0">
     <ion-item
       *ngFor="let item of items"
       (click)="onGetItemInfo(item)"
@@ -28,11 +29,58 @@
     </ion-item>
   </ng-container>
 
-  <ng-container *ngIf="listMode === 'standard'">
+  <ng-container *ngIf="listMode === 'full' && itemsFiltered.length > 0">
+    <ion-item
+      *ngFor="let item of itemsFiltered"
+      (click)="onGetItemInfo(item)"
+      [lines]="lines"
+    >
+      <ion-avatar>
+        <img [src]="item.image" />
+      </ion-avatar>
+      <ion-label>
+        <h1>{{ item.title }}</h1>
+        <p>{{ item.description }}</p>
+      </ion-label>
+      <ion-icon
+        name="chevron-forward-outline"
+        slot="end"
+        [color]="insetIconColor"
+        *ngIf="inset"
+      ></ion-icon>
+    </ion-item>
+  </ng-container>
+
+  <ng-container *ngIf="listMode === 'standard' && itemsFiltered.length === 0">
     <ion-item
       class="item-standard"
       [lines]="lines"
       *ngFor="let item of items"
+      (click)="onGetItemInfo(item)"
+      [mode]="mode"
+    >
+      <ion-icon
+        slot="start"
+        [name]="item.icon"
+        class="icon-standard"
+      ></ion-icon>
+      <ion-label>
+        {{ item.title }}
+      </ion-label>
+      <ion-icon
+        name="chevron-forward-outline"
+        slot="end"
+        [color]="insetIconColor"
+        *ngIf="inset"
+      ></ion-icon>
+    </ion-item>
+  </ng-container>
+
+  <ng-container *ngIf="listMode === 'standard' && itemsFiltered.length > 0">
+    <ion-item
+      class="item-standard"
+      [lines]="lines"
+      *ngFor="let item of itemsFiltered"
       (click)="onGetItemInfo(item)"
       [mode]="mode"
     >

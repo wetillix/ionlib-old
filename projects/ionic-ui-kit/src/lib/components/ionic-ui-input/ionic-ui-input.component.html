@@ -11,7 +11,6 @@
     [clearInput]="clearInput"
     [clearOnEdit]="clearOnEdit"
     [debounce]="debounce"
-    Ò
     [enterkeyhint]="enterkeyhint"
     [inputmode]="inputmode"
     [maxlength]="maxlength"
@@ -32,6 +31,10 @@
       'input-disabled': disabled
     }"
     [style.background]="background"
+    (ionBlur)="onIonBlur($event)"
+    (ionChange)="onIonChange($event)"
+    (ionFocus)="onIonFocus($event)"
+    (ionInput)="onIonInput($event)"
   ></ion-input>
   <ion-icon *ngIf="iconName" [name]="iconName" [color]="iconColor"></ion-icon>
 </ion-item>

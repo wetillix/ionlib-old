@@ -1,24 +1,18 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { IItem } from '../../models/iitem/iitem.model';
 
 @Component({
-  selector: 'ion-ui-input',
-  templateUrl: './ionic-ui-input.component.html',
-  styleUrls: ['./ionic-ui-input.component.css'],
+  selector: 'ion-ui-searchbar',
+  templateUrl: './ionic-ui-searchbar.component.html',
+  styleUrls: ['./ionic-ui-searchbar.component.css'],
 })
-export class IonicUiInputComponent implements OnInit {
+export class IonicUiSearchbarComponent implements OnInit {
   @Input() placeholder: string = 'Your placeholder text';
   @Input() type: string = 'text';
   @Input() disabled: boolean = false;
   @Input() color: string;
-  @Input() background: string = '#F2F2F2';
-  @Input() accept?: string;
   @Input() autocapitalize = 'off';
   @Input() autocomplete: string = 'off';
   @Input() autocorrect: 'on' | 'off' = 'off';
-  @Input() autofocus = false;
-  @Input() clearInput = false;
-  @Input() clearOnEdit?: boolean;
   @Input() debounce = 0;
   @Input() enterkeyhint?:
     | 'enter'
@@ -37,30 +31,38 @@ export class IonicUiInputComponent implements OnInit {
     | 'numeric'
     | 'decimal'
     | 'search';
-  @Input() max?: string | number;
-  @Input() maxlength?: number;
-  @Input() min?: string | number;
-  @Input() minlength?: number;
-  @Input() multiple?: boolean;
   @Input() name: string;
   @Input() pattern?: string;
   @Input() readonly = false;
   @Input() required = false;
   @Input() spellcheck = false;
-  @Input() step?: string;
-  @Input() size?: number;
-  @Input() value?: string;
+  @Input() value: string;
 
-  @Input() error: boolean = false;
-  @Input() success: boolean = false;
+  @Input() animated: boolean;
+  @Input() cancelButtonIcon: string;
+  @Input() cancelButtonText = null;
+  @Input() clearIcon: string = 'close-outline';
+  @Input() showCancelButton: string;
+  @Input() showClearButton: string;
+  @Input() searchIcon = null;
 
-  @Input() iconName: string;
-  @Input() iconColor: string = 'dark';
+  @Input() backgroundColor = '#fff';
+  @Input() borderRadius = 'initial';
+  @Input() boxShadow = 'initial';
+  @Input() cancelButtonColor = 'initial';
+  @Input() clearButtonColor = 'initial';
+  @Input() searchIconColor = 'initial';
+  @Input() placeholderColor = '#a8b1bef2';
+  @Input() placeholderFontStyle = 'initial';
+  @Input() placeholderFontWeight = 'initial';
+  @Input() placeholderOpacity = 'initial';
 
   @Output() ionBlur = new EventEmitter<any>();
   @Output() ionChange = new EventEmitter<any>();
   @Output() ionFocus = new EventEmitter<any>();
   @Output() ionInput = new EventEmitter<any>();
+  @Output() ionCancel = new EventEmitter<any>();
+  @Output() ionClear = new EventEmitter<any>();
 
   constructor() {}
 
@@ -80,5 +82,13 @@ export class IonicUiInputComponent implements OnInit {
 
   onIonInput(event: any): void {
     this.ionInput.emit(event);
+  }
+
+  onIonCancel(event: any): void {
+    this.ionCancel.emit(event);
+  }
+
+  onIonClear(event: any): void {
+    this.ionClear.emit(event);
   }
 }
