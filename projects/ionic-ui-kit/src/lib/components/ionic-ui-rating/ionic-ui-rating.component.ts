@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ionic-ui-rating',
+  selector: 'ion-ui-rating',
   templateUrl: './ionic-ui-rating.component.html',
   styleUrls: ['./ionic-ui-rating.component.css']
 })
