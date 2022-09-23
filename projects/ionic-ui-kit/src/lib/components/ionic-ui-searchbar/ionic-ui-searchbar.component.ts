@@ -52,7 +52,7 @@ export class IonicUiSearchbarComponent implements OnInit {
   @Input() cancelButtonColor = 'initial';
   @Input() clearButtonColor = 'initial';
   @Input() searchIconColor = 'initial';
-  @Input() placeholderColor = 'initial';
+  @Input() placeholderColor = '#a8b1bef2';
   @Input() placeholderFontStyle = 'initial';
   @Input() placeholderFontWeight = 'initial';
   @Input() placeholderOpacity = 'initial';

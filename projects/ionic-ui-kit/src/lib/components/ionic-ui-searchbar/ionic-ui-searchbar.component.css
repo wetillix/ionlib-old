@@ -2,9 +2,9 @@ ion-item > ion-searchbar {
   --padding-start: 10px;
   --padding-end: 42px;
   height: 48px;
-  --background: white;
+  --background: #fff;
   border-radius: 6px;
-  border: 1px solid #a0aec0;
+  border: 1px solid #4a5568;
 }
 
 ion-item > ion-icon {
