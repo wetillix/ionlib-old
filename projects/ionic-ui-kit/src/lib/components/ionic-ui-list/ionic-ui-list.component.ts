@@ -8,6 +8,7 @@ import { IItem } from '../../models/iitem/iitem.model';
 })
 export class IonicUiListComponent implements OnInit {
   @Input() items: IItem[] = [];
+  @Input() itemsFiltered?: IItem[] = [];
   @Input() listMode: 'standard' | 'full' = 'standard';
   @Input() lines: 'full' | 'inset' | 'none' | undefined;
   @Input() borderLines: string;
@@ -15,6 +16,8 @@ export class IonicUiListComponent implements OnInit {
   @Input() inset: boolean = false;
   @Input() insetIconColor: string = 'medium';
   @Input() mode: 'ios' | 'android' = 'ios';
+  @Input() boxShadowList =
+    '0px 0px 8px -1px rgb(26 32 44 / 5%), 0px 0px 1px #a0aec0';
 
   @Output() onItemClick = new EventEmitter<IItem>();
 
