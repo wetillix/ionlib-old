@@ -14,6 +14,10 @@ ion-item > ion-icon {
   font-size: larger;
 }
 
+ion-input {
+  border: 1px solid #a0aec0;
+}
+
 .input-success {
   color: #425466;
   border-radius: 12px;

@@ -12,6 +12,11 @@ export class IonicUiCheckboxComponent implements OnInit {
   @Input() value: boolean = false;
   @Input() position: 'start' | 'end' = 'start';
   @Input() label: string;
+  @Input() labelSize: string;
+  @Input() height: string;
+  @Input() width: string;
+  @Input() borderRadius: string;
+  @Input() border: string;
 
   @Output() change = new EventEmitter<boolean>();
 
