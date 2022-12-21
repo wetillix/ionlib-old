@@ -36,5 +36,11 @@
     (ionFocus)="onIonFocus($event)"
     (ionInput)="onIonInput($event)"
   ></ion-input>
-  <ion-icon *ngIf="iconName" [name]="iconName" [color]="iconColor"></ion-icon>
+  <ion-icon
+    [style.display]="iconName ? 'block' : 'none'"
+    [style.top]="iconPositionTop"
+    [name]="iconName"
+    [color]="iconColor"
+    (click)="onIconClick($event)"
+  ></ion-icon>
 </ion-item>

@@ -6,10 +6,20 @@ import { IonicUiInputModule } from './components/ionic-ui-input/ionic-ui-input.m
 import { IonicUiListModule } from './components/ionic-ui-list/ionic-ui-list.module';
 import { IonicUiSearchbarModule } from './components/ionic-ui-searchbar/ionic-ui-searchbar.module';
 import { IonicUiAutocompleteModule } from './components/ionic-ui-autocomplete/ionic-ui-autocomplete.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [],
-  imports: [IonicModule.forRoot()],
+  imports: [
+    CommonModule,
+    IonicUiButtonModule,
+    IonicUiListModule,
+    IonicUiCheckboxModule,
+    IonicUiInputModule,
+    IonicUiSearchbarModule,
+    IonicUiAutocompleteModule,
+    IonicModule.forRoot(),
+  ],
   exports: [
     IonicUiButtonModule,
     IonicUiListModule,

@@ -56,11 +56,13 @@ export class IonicUiInputComponent implements OnInit {
 
   @Input() iconName: string;
   @Input() iconColor: string = 'dark';
+  @Input() iconPositionTop = '15px'
 
   @Output() ionBlur = new EventEmitter<any>();
   @Output() ionChange = new EventEmitter<any>();
   @Output() ionFocus = new EventEmitter<any>();
   @Output() ionInput = new EventEmitter<any>();
+  @Output() ionIconClick = new EventEmitter<any>();
 
   constructor() {}
 
@@ -80,5 +82,9 @@ export class IonicUiInputComponent implements OnInit {
 
   onIonInput(event: any): void {
     this.ionInput.emit(event);
+  }
+
+  onIconClick(event: any): void {
+    this.ionIconClick.emit(event);
   }
 }
