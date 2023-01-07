@@ -6,38 +6,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ionic-ui-kit": {
+    "ionlib": {
       "projectType": "library",
-      "root": "projects/ionic-ui-kit",
-      "sourceRoot": "projects/ionic-ui-kit/src",
+      "root": "projects/ionlib",
+      "sourceRoot": "projects/ionlib/src",
       "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ionic-ui-kit/tsconfig.lib.json",
-            "project": "projects/ionic-ui-kit/ng-package.json"
+            "tsConfig": "projects/ionlib/tsconfig.lib.json",
+            "project": "projects/ionlib/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ionic-ui-kit/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ionlib/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ionic-ui-kit/src/test.ts",
-            "tsConfig": "projects/ionic-ui-kit/tsconfig.spec.json",
-            "karmaConfig": "projects/ionic-ui-kit/karma.conf.js"
+            "main": "projects/ionlib/src/test.ts",
+            "tsConfig": "projects/ionlib/tsconfig.spec.json",
+            "karmaConfig": "projects/ionlib/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ionic-ui-kit/tsconfig.lib.json",
-              "projects/ionic-ui-kit/tsconfig.spec.json"
+              "projects/ionlib/tsconfig.lib.json",
+              "projects/ionlib/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -46,5 +46,5 @@
         }
       }
     }},
-  "defaultProject": "ionic-ui-kit"
+  "defaultProject": "ionlib"
 }

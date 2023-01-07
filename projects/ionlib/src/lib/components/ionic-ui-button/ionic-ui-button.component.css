@@ -1,0 +1,10 @@
+ion-spinner {
+  display: block;
+  position: absolute;
+  right: 0px;
+}
+
+ion-button {
+  --border-radius: 5px;
+  height: 50px;
+}
